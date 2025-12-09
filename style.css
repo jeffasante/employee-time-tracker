@@ -1,0 +1,453 @@
+/* style.css - Minimalist Design System */
+
+:root {
+  /* Color Palette */
+  --color-bg: #F5F3EF;
+  --color-text-primary: #2C2C2C;
+  --color-text-secondary: #6B6B6B;
+  --color-accent: #2563EB;
+  --color-success: #10B981;
+  --color-danger: #EF4444;
+  --color-white: #FFFFFF;
+  
+  /* Spacing Scale (8px grid) */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 48px;
+  --space-xl: 80px;
+  --space-2xl: 120px;
+  
+  /* Typography Scale */
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 24px;
+  --font-size-xl: 48px;
+  --font-size-2xl: 72px;
+  
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: var(--color-bg);
+    min-height: 100vh;
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    font-size: var(--font-size-base);
+}
+
+/* Login Page Styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: var(--space-md);
+}
+
+.login-box {
+    background: var(--color-white);
+    padding: var(--space-xl);
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    max-width: 440px;
+    border: 1px solid rgba(44, 44, 44, 0.08);
+}
+
+.login-box h1 {
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-sm);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-xl);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+}
+
+.form-group {
+    margin-bottom: var(--space-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--space-xs);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+}
+
+.form-group input {
+    width: 100%;
+    padding: var(--space-sm);
+    border: 1px solid rgba(44, 44, 44, 0.12);
+    border-radius: 0;
+    font-size: var(--font-size-base);
+    transition: border-color 0.2s ease;
+    background: var(--color-white);
+    color: var(--color-text-primary);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--color-text-primary);
+}
+
+.form-group input::placeholder {
+    color: var(--color-text-secondary);
+    opacity: 0.6;
+}
+
+.error-message {
+    background: rgba(239, 68, 68, 0.08);
+    color: var(--color-danger);
+    padding: var(--space-sm);
+    border-radius: 0;
+    margin-bottom: var(--space-md);
+    border-left: 2px solid var(--color-danger);
+    font-size: var(--font-size-sm);
+}
+
+.demo-info {
+    margin-top: var(--space-xl);
+    padding: var(--space-md);
+    background: transparent;
+    border-radius: 0;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    border-top: 1px solid rgba(44, 44, 44, 0.08);
+}
+
+.demo-info p {
+    margin: var(--space-xs) 0;
+    line-height: 1.8;
+}
+
+.demo-info strong {
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-medium);
+}
+
+/* Button Styles */
+.btn {
+    padding: var(--space-sm) var(--space-lg);
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: -0.01em;
+}
+
+.btn-primary {
+    background: var(--color-accent);
+    color: var(--color-white);
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background: #1D4ED8;
+    transform: translateY(-1px);
+}
+
+.btn-success {
+    background: var(--color-accent);
+    color: var(--color-white);
+}
+
+.btn-success:hover {
+    background: #1D4ED8;
+    transform: translateY(-1px);
+}
+
+.btn-danger {
+    background: var(--color-accent);
+    color: var(--color-white);
+}
+
+.btn-danger:hover {
+    background: #1D4ED8;
+    transform: translateY(-1px);
+}
+
+.btn-large {
+    padding: var(--space-md) var(--space-xl);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    border-radius: 32px;
+}
+
+.btn-small {
+    padding: var(--space-xs) var(--space-md);
+    font-size: var(--font-size-sm);
+    background: transparent;
+    color: var(--color-text-primary);
+    border: 1px solid rgba(44, 44, 44, 0.12);
+    border-radius: 20px;
+}
+
+.btn-small:hover {
+    background: var(--color-accent);
+    color: var(--color-white);
+    border-color: var(--color-accent);
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-md);
+}
+
+.dashboard-header {
+    background: transparent;
+    padding: var(--space-lg) 0;
+    border-radius: 0;
+    margin-bottom: var(--space-2xl);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(44, 44, 44, 0.08);
+}
+
+.dashboard-header h1 {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -0.02em;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.user-info span {
+    color: var(--color-text-secondary);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-sm);
+}
+
+/* Clock Section */
+.clock-section {
+    background: transparent;
+    padding: var(--space-2xl) 0;
+    border-radius: 0;
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+    box-shadow: none;
+}
+
+.current-status {
+    margin-bottom: var(--space-xl);
+}
+
+.status-badge {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-md);
+    border-radius: 0;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-md);
+    letter-spacing: 0.02em;
+}
+
+.status-badge.clocked-in {
+    background: transparent;
+    color: var(--color-success);
+}
+
+.status-badge.clocked-out {
+    background: transparent;
+    color: var(--color-text-secondary);
+}
+
+.current-status p {
+    color: var(--color-text-secondary);
+    margin-top: var(--space-xs);
+    font-size: var(--font-size-base);
+}
+
+/* Summary Section */
+.summary-section {
+    background: transparent;
+    padding: var(--space-xl) 0;
+    border-radius: 0;
+    margin-bottom: var(--space-2xl);
+    box-shadow: none;
+    text-align: center;
+}
+
+.summary-section h2 {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-lg);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.hours-card {
+    text-align: center;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    color: var(--color-text-primary);
+}
+
+.hours-number {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-md);
+    letter-spacing: -0.03em;
+    line-height: 1;
+}
+
+.hours-label {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    font-weight: var(--font-weight-regular);
+}
+
+/* Timesheet Section */
+.timesheet-section {
+    background: var(--color-white);
+    padding: var(--space-xl);
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid rgba(44, 44, 44, 0.08);
+    margin-top: var(--space-2xl);
+}
+
+.timesheet-section h2 {
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-xl);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -0.02em;
+}
+
+.no-data {
+    text-align: center;
+    color: var(--color-text-secondary);
+    padding: var(--space-2xl) var(--space-md);
+    font-size: var(--font-size-base);
+}
+
+.timesheet-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.timesheet-table thead {
+    background: transparent;
+}
+
+.timesheet-table th {
+    padding: var(--space-md) var(--space-sm);
+    text-align: left;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-secondary);
+    border-bottom: 1px solid rgba(44, 44, 44, 0.12);
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.timesheet-table td {
+    padding: var(--space-md) var(--space-sm);
+    border-bottom: 1px solid rgba(44, 44, 44, 0.06);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-base);
+}
+
+.timesheet-table tbody tr:hover {
+    background: rgba(44, 44, 44, 0.02);
+}
+
+.timesheet-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.active-badge {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-sm);
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--color-accent);
+    border-radius: 0;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    border: 1px solid var(--color-accent);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    :root {
+        --space-xl: 48px;
+        --space-2xl: 80px;
+        --font-size-xl: 36px;
+        --font-size-2xl: 56px;
+    }
+
+    .dashboard-container {
+        padding: var(--space-lg) var(--space-md);
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+        align-items: flex-start;
+    }
+
+    .dashboard-header h1 {
+        width: 100%;
+    }
+
+    .user-info {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .timesheet-table {
+        font-size: var(--font-size-sm);
+    }
+
+    .timesheet-table th,
+    .timesheet-table td {
+        padding: var(--space-sm) var(--space-xs);
+    }
+
+    .timesheet-section {
+        padding: var(--space-lg);
+    }
+
+    .btn-large {
+        padding: var(--space-md) var(--space-lg);
+        font-size: var(--font-size-base);
+    }
+
+    .clock-section {
+        padding: var(--space-xl) 0;
+    }
+}
