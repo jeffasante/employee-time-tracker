@@ -1,0 +1,43 @@
+# Dependencies
+/vendor/
+/node_modules/
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.staging
+
+# PHP
+*.log
+*.cache
+*.tmp
+composer.lock
+
+# Database
+*.sql
+!database.sql
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project specific
+tree.md
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
